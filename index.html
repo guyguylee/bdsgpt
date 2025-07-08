@@ -8,17 +8,22 @@
   <style>
     body {
       margin: 0;
-      padding: 0;
+      padding: 0 24px; /* 좌우 여백 추가 */
       background-color: #3f88f4;
       font-family: 'Pretendard', sans-serif;
       color: white;
       text-align: center;
+      box-sizing: border-box;
     }
+
     .logo {
       font-size: 48px;
-      font-weight: bold;
+      font-family: 'Sans-serif';
+      font-weight: 700;
       margin-top: 80px;
+      word-spacing: 4px;
     }
+
     .logo span.white { color: white; }
     .logo span.g { color: #EA4335; }  /* 구글 G 빨간색 */
     .logo span.p { color: #34A853; }  /* 구글 P 초록색 */
@@ -34,11 +39,13 @@
       margin-top: 16px;
       font-size: 16px;
       font-weight: normal;
+      line-height: 1.6;
     }
 
     .footer {
       margin-top: 100px;
       font-size: 16px;
+      line-height: 1.6;
     }
 
     .footer p {
@@ -48,6 +55,20 @@
     .email {
       font-weight: bold;
       margin-top: 40px;
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 40px;
+      }
+
+      .section {
+        font-size: 18px;
+      }
+
+      .description, .footer {
+        font-size: 15px;
+      }
     }
   </style>
 </head>
@@ -60,14 +81,14 @@
   </div>
 
   <div class="section">프로젝트 개요</div>
-  <div class="description">   AI가 예측하고, GPT가 설명하는 부동산 플랫폼   </div>
+  <div class="description">AI가 예측하고, GPT가 설명하는 부동산 플랫폼</div>
 
   <div class="section">프로젝트 목표</div>
-  <div class="description">   Big Data AI 기반 예측형 부동산 모바일앱   </div>
+  <div class="description">Big Data AI 기반 예측형 부동산 모바일앱</div>
 
   <div class="section">질문이 있으신가요?</div>
-  <div class="description">   
-    프로젝트에 관한 자세한 내용이 궁금하시다면 이메일로 문의해 주세요.   
+  <div class="description">
+    프로젝트에 관한 자세한 내용이 궁금하시다면 이메일로 문의해 주세요.
   </div>
 
   <div class="footer">
