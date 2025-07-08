@@ -1,100 +1,79 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AI가 예측하고 GPT가 설명하는 부동산GPT">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="30lAYGldkbx-smGPuE3qsjBcf9kz9frNMuL3KT6TxnM" />
   <title>부동산GPT</title>
   <style>
     body {
-      font-family: 'Noto Sans KR', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #ffffff;
-      color: #333;
-    }
-
-    header {
-      background: url('배경이미지.png') center center / cover no-repeat;
+      background-color: #3f88f4;
+      font-family: 'Pretendard', sans-serif;
       color: white;
-      padding: 100px 20px;
       text-align: center;
     }
-
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.2em;
-      font-weight: 300;
-    }
-
-    section {
-      text-align: center;
-      padding: 60px 20px;
-      border-bottom: 1px solid #ddd;
-    }
-
-    h2 {
-      color: #1a73e8;
-      font-size: 1.8em;
-    }
-
-    p {
-      font-size: 1.1em;
-      line-height: 1.7;
-    }
-
-    .button {
-      display: inline-block;
-      background-color: #1a73e8;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 4px;
-      text-decoration: none;
+    .logo {
+      font-size: 48px;
       font-weight: bold;
-      margin-top: 20px;
+      margin-top: 80px;
+    }
+    .logo span.white { color: white; }
+    .logo span.g { color: #4285F4; }
+    .logo span.p { color: #34A853; }
+    .logo span.t { color: #FBBC05; }
+
+    .section {
+      margin-top: 80px;
+      font-size: 20px;
+      font-weight: bold;
     }
 
-    footer {
-      text-align: center;
-      font-size: 0.9em;
-      color: #666;
-      padding: 30px 10px;
+    .description {
+      margin-top: 16px;
+      font-size: 16px;
+      font-weight: normal;
     }
 
-    footer a {
-      color: #333;
-      text-decoration: none;
+    .footer {
+      margin-top: 100px;
+      font-size: 16px;
+    }
+
+    .footer p {
+      margin: 8px 0;
+    }
+
+    .email {
+      font-weight: bold;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
+  <div class="logo">
+    <span class="white">부동산</span>
+    <span class="g">G</span>
+    <span class="p">P</span>
+    <span class="t">T</span>
+  </div>
 
-  <header>
-    <h1>부동산GPT</h1>
-    <p>AI가 예측하고, GPT가 설명하는 부동산GPT</p>
-  </header>
+  <div class="section">프로젝트 개요</div>
+  <div class="description">AI가 예측하고, GPT가 설명하는 플랫폼 부동산GPT</div>
 
-  <section>
-    <h2>프로젝트 목표</h2>
-    <p><strong>Big Data · AI</strong> 기반 예측형 부동산 어플 모바일앱</p>
-  </section>
+  <div class="section">프로젝트 목표</div>
+  <div class="description">Big Data AI 기반 예측형 부동산 어플 모바일앱</div>
 
-  <section>
-    <h2>질문이 있으신가요?</h2>
-    <p>프로젝트에 관한 자세한 내용이 궁금하시다면 이메일(<strong>ceo@nzip.ai</strong>)로 문의해 주세요.</p>
-    <a class="button" href="mailto:ceo@nzip.ai">참여하기</a>
-  </section>
+  <div class="section">질문이 있으신가요?</div>
+  <div class="description">
+    프로젝트에 관한 자세한 내용이 궁금하시다면 이메일로 문의해 주세요.
+  </div>
 
-  <footer>
-    [이메일] ceo@nzip.ai  |  
-    [주소] 서울특별시 금천구 가산디지털1로 120, 819호  |  
-    [사업자등록번호] 857-86-03315
-  </footer>
-
+  <div class="footer">
+    <p class="email">[이메일] ceo@nzip.ai</p>
+    <p>[주소] 서울특별시 금천구 가산디지털1로 120, 819호</p>
+    <p>[사업자등록번호] 857-86-03315</p>
+  </div>
 </body>
 </html>
