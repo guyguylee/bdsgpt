@@ -21,13 +21,16 @@
       font-family: 'Sans-serif';
       font-weight: 700;
       margin-top: 80px;
-      word-spacing: 4px;
     }
 
     .logo span.white { color: white; }
-    .logo span.g { color: #EA4335; }  /* 구글 G 빨간색 */
-    .logo span.p { color: #34A853; }  /* 구글 P 초록색 */
-    .logo span.t { color: #FBBC05; }  /* 구글 T 노란색 */
+    .gpt span.g { color: #EA4335; }  /* 구글 G 빨간색 */
+    .gpt span.p { color: #34A853; }  /* 구글 P 초록색 */
+    .gpt span.t { color: #FBBC05; }  /* 구글 T 노란색 */
+    .gpt {
+      display: inline-block;
+      letter-spacing: -1px; /* 글자 간격 살짝 좁히기 */
+    }
 
     .section {
       margin-top: 80px;
@@ -75,9 +78,11 @@
 <body>
   <div class="logo">
     <span class="white">부동산</span>
-    <span class="g">G</span>
-    <span class="p">P</span>
-    <span class="t">T</span>
+    <span class="gpt">
+      <span class="g">G</span>
+      <span class="p">P</span>
+      <span class="t">T</span>
+    </span>
   </div>
 
   <div class="section">프로젝트 개요</div>
