@@ -7,11 +7,9 @@
   <style>
     body {
       font-family: 'Noto Sans KR', sans-serif;
-      margin: 0;
       padding: 1rem;
       background-color: #ffffff;
       font-size: 0.95rem;
-      line-height: 1.5;
     }
 
     .table-container {
@@ -21,32 +19,30 @@
     table {
       width: 100%;
       border-collapse: collapse;
-      background: #ffffff;
-      min-width: 600px;
+      table-layout: fixed;
       box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
 
     th, td {
-      padding: 0.75rem 1rem;
-      border: 1px solid #e0e0e0;
+      padding: 0.75rem;
+      border: 1px solid #ddd;
       text-align: center;
-      white-space: nowrap;
+      word-wrap: break-word;
     }
 
     th {
-      background-color: #f9f9f9;
+      background-color: #f8f8f8;
       font-weight: 600;
-      font-size: 1rem;
     }
 
-    td {
-      font-size: 0.9rem;
-    }
+    /* 셀 가로폭 비율 설정 */
+    colgroup col:nth-child(1) { width: 25%; }
+    colgroup col:nth-child(2) { width: 50%; }
+    colgroup col:nth-child(3) { width: 25%; }
 
     @media (max-width: 480px) {
       body {
-        padding: 0.75rem;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
       }
       th, td {
         padding: 0.5rem;
@@ -58,6 +54,11 @@
 
   <div class="table-container">
     <table>
+      <colgroup>
+        <col />
+        <col />
+        <col />
+      </colgroup>
       <thead>
         <tr>
           <th>항목</th>
