@@ -3,52 +3,89 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>이메일 인증</title>
+  <title>이메일 인증 완료</title>
   <style>
-    :root { color-scheme: light dark; }
-    html,body{height:100%}
-    body{
-      margin:0; display:grid; place-items:center; height:100%;
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+    :root {
+      --brand: #4285F4; /* 버튼 색상 */
+      --fg: #111827;
+      --fg-sub: #374151;
+      --border: #e5e7eb;
+      --bg: #f6f8fa;
+      --white: #ffffff;
     }
-    h1{margin:0 0 16px; font-size:20px; font-weight:700; text-align:center}
-    button{
-      padding:10px 18px; border:0; border-radius:10px; font-weight:700; cursor:pointer;
-      background:#4f46e5; color:#fff;
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, 'Noto Sans KR', sans-serif;
+      display: grid;
+      place-items: center;
+      padding: 16px;
     }
-    @media (prefers-color-scheme: dark){ button{ background:#6366f1; } }
-    .wrap{ text-align:center; }
+    .card {
+      width: 100%;
+      max-width: 520px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.05);
+      text-align: left;
+    }
+    h1 { margin: 0 0 10px; font-size: 20px; }
+    p  { margin: 0 0 16px; color: var(--fg-sub); line-height: 1.6; }
+    .actions { margin-top: 8px; display: flex; gap: 8px; }
+    button {
+      appearance: none; border: 0; border-radius: 8px;
+      background: var(--brand); color: #fff; padding: 12px 18px;
+      font-weight: 600; cursor: pointer;
+    }
+    button:active { transform: translateY(1px); }
+    .hint {
+      display: none; margin-top: 12px; font-size: 14px; color: var(--fg-sub);
+      background: #F9FAFB; border: 1px dashed var(--border); border-radius: 8px; padding: 12px;
+    }
+    .small { font-size: 12px; color: #9ca3af; margin-top: 14px; }
   </style>
 </head>
 <body>
-  <div class="wrap">
+  <main class="card">
     <h1>이메일 인증이 완료되었습니다.</h1>
-    <button id="ok" type="button">확인</button>
-  </div>
+    <p>확인을 누른 뒤 앱으로 돌아가서 다음 절차를 진행해 주세요.</p>
+
+    <div class="actions">
+      <button id="ok">확인</button>
+    </div>
+
+    <!-- 닫기 실패 시 안내 -->
+    <div id="fallback" class="hint">
+      브라우저 보안 정책 때문에 창을 자동으로 닫을 수 없는 환경입니다.<br>
+      이 창을 직접 닫고 앱으로 돌아가 주세요.
+    </div>
+
+    <p class="small">창이 닫히지 않으면 위 안내대로 수동으로 닫아 주세요.</p>
+  </main>
 
   <script>
-    function closeWindow() {
-      // iOS WKWebView (Flutter/Swift) 핸들러
-      try {
-        if (window.webkit?.messageHandlers?.close) {
-          window.webkit.messageHandlers.close.postMessage('close');
-        }
-      } catch(_) {}
+    function tryClose() {
+      // 1) 보편적 닫기 시도 (팝업으로 열린 경우에만 성공)
+      window.close();
 
-      // ReactNative/일부 WebView
-      try {
-        if (window.ReactNativeWebView?.postMessage) {
-          window.ReactNativeWebView.postMessage('close');
+      // 2) 닫힘 감지는 불가하므로, 잠시 후에도 문서가 살아있다면 안내만 표시 (빈 탭 이동 방지)
+      setTimeout(function () {
+        // 버튼 숨기고 안내 문구 노출
+        var ok = document.getElementById('ok');
+        var fb = document.getElementById('fallback');
+        if (ok && fb) {
+          ok.style.display = 'none';
+          fb.style.display = 'block';
         }
-      } catch(_) {}
-
-      // 일반 브라우저 시도
-      try { window.opener = null; } catch(_) {}
-      try { window.open('', '_self'); } catch(_) {}
-      try { window.close(); } catch(_) {}
+      }, 250);
     }
 
-    document.getElementById('ok').addEventListener('click', closeWindow);
+    document.getElementById('ok').addEventListener('click', tryClose);
   </script>
 </body>
 </html>
