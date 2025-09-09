@@ -1,49 +1,28 @@
-<!doctype html>
-<html lang="ko">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>이메일 인증 완료</title>
-    <style>
-      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, sans-serif; margin:0; background:#fafafa; color:#111; }
-      .wrap { max-width:520px; margin:8vh auto; padding:28px; background:#fff; border-radius:16px; box-shadow:0 8px 28px rgba(0,0,0,.06); text-align:center; }
-      h1 { font-size:22px; margin:0 0 8px; }
-      p  { color:#555; line-height:1.6; margin:0 0 16px; }
-      .btn { display:inline-block; padding:12px 18px; background:#4285F4; color:#fff; border-radius:10px; text-decoration:none; font-weight:600; }
-      .sub { font-size:12px; color:#888; margin-top:12px; word-break:break-all; }
-      .spinner { width:28px; height:28px; border-radius:50%; border:3px solid #e5e7eb; border-top-color:#4285F4; margin:12px auto 4px; animation:spin 1s linear infinite; }
-      @keyframes spin { to { transform: rotate(360deg); } }
-    </style>
-    <script>
-      // 1) 우선 앱 딥링크로 보내 보기
-      const APP_DEEPLINK = "bdsgpt://auth-callback";
-      // 2) 실패/미설치 대비: 웹앱으로 폴백
-      const WEB_FALLBACK = "https://nzip.ai/";
-
-      // iOS/Android 일부 브라우저에서는 즉시 리다이렉트가 막히는 경우가 있어
-      // 약간의 지연 후 시도 + 폴백을 준비합니다.
-      function openApp() {
-        // 앱으로 이동 시도
-        window.location.href = APP_DEEPLINK;
-        // 2초 내에 앱이 열리지 않으면 웹으로 폴백
-        setTimeout(() => {
-          window.location.href = WEB_FALLBACK;
-        }, 2000);
-      }
-
-      // 페이지 로드 후 자동 실행
-      window.addEventListener("load", () => {
-        setTimeout(openApp, 1200); // "인증되었습니다" 문구를 잠깐 보여주고 이동
-      });
-    </script>
-  </head>
-  <body>
-    <div class="wrap">
-      <div class="spinner"></div>
-      <h1>이메일 인증이 완료되었습니다.</h1>
-      <p>잠시 후 앱으로 돌아가 다음 절차를 계속합니다.</p>
-      <a class="btn" href="bdsgpt://auth-callback">앱으로 바로 이동</a>
-      <div class="sub">자동으로 이동하지 않으면 위 버튼을 눌러 주세요.<br/>앱이 없거나 열리지 않으면 <a href="https://nzip.ai/">웹으로 이동</a>.</div>
-    </div>
-  </body>
-</html>
+<!doctype html><html lang="ko"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>이메일 인증 완료</title>
+<style>
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Noto Sans,sans-serif;background:#fafafa;margin:0}
+.wrap{max-width:520px;margin:8vh auto;padding:28px;background:#fff;border-radius:16px;
+      box-shadow:0 8px 28px rgba(0,0,0,.06);text-align:center}
+h1{font-size:22px;margin:0 0 8px} p{color:#555;line-height:1.6;margin:0 0 16px}
+.btn{display:inline-block;padding:12px 18px;background:#4285F4;color:#fff;border-radius:10px;
+     text-decoration:none;font-weight:600}
+.spinner{width:28px;height:28px;border-radius:50%;border:3px solid #e5e7eb;border-top-color:#4285F4;
+         margin:12px auto 4px;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+<script>
+  const APP_DEEPLINK = "bdsgpt://auth-callback";      // 앱 딥링크(프로젝트에 맞게)
+  const WEB_FALLBACK = "https://bdsgpt.flutterflow.app/"; // 앱이 안 열릴 때 대체
+  function go(){ location.href = APP_DEEPLINK; setTimeout(()=>location.href = WEB_FALLBACK, 2000); }
+  addEventListener("load", ()=> setTimeout(go, 1200)); // 1.2초 안내 후 이동
+</script>
+</head><body>
+  <div class="wrap">
+    <div class="spinner"></div>
+    <h1>이메일 인증이 완료되었습니다.</h1>
+    <p>잠시 후 앱으로 돌아가 다음 절차를 계속합니다.</p>
+    <a class="btn" href="bdsgpt://auth-callback">앱으로 바로 이동</a>
+  </div>
+</body></html>
