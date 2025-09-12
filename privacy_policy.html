@@ -1,116 +1,191 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>내정보 - 약관 및 정책</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>부G 서비스 약관 및 정책</title>
+  <meta name="description" content="부G 서비스 이용약관 및 정책 안내" />
   <style>
-    body {
-      font-family: 'Noto Sans KR', sans-serif;
-      padding: 24px;
-      font-size: 18px;
-      line-height: 1.8;
-      color: #333;
-      background-color: #fff;
+    :root {
+      --fg:#111;
+      --muted:#666;
+      --link:#0b57d0;
+      --bg:#fff;
+      --border:#e5e7eb;
     }
-    p, li, h2 {
-      margin-top: 10px;
+    html,body{background:var(--bg); color:var(--fg);}
+    body{
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Apple SD Gothic Neo,Noto Sans KR,"Malgun Gothic",sans-serif;
+      line-height:1.6; margin:0; padding:0;
     }
-    h2 {
-      font-weight: bold;
-      font-size: 18px;
-    }
-    hr {
-      margin: 32px 0;
-      border: none;
-      border-top: 1px solid #ccc;
+    .wrap{max-width:880px; margin:0 auto; padding:28px 20px 72px;}
+    header h1{margin:0 0 6px 0; font-size:28px; line-height:1.25;}
+    .meta{color:var(--muted); margin-bottom:24px;}
+    h2{margin-top:32px; padding-top:8px; border-top:1px solid var(--border);}
+    h3{margin-top:18px;}
+    a{color:var(--link); text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    ul,ol{padding-left:22px;}
+    .toc{border:1px solid var(--border); background:#fafafa; padding:14px 16px; border-radius:10px; margin:18px 0 24px;}
+    .fine{color:var(--muted); font-size:13px;}
+    .blockquote{border-left:4px solid var(--border); padding:10px 12px; background:#fbfbfb;}
+    @media print {
+      a{color:inherit; text-decoration:none;}
+      .toc{border:1px solid #ccc; background:#fff;}
     }
   </style>
 </head>
 <body>
+  <div class="wrap">
+    <header>
+      <h1>부G 서비스 약관 및 정책</h1>
+      <div class="meta">
+        시행일자: <time datetime="2025-03-26">2025년 3월 26일</time><br />
+        본 약관은 양봉주식회사(이하 “회사”)가 제공하는 웹사이트 및 모바일 앱 기반의 서비스(이하 “부G 서비스” 또는 “서비스”) 이용과 관련하여, 회사와 이용자, 공인중개사 회원 간의 권리·의무·책임사항, 개인정보 처리, 광고성 정보 수신, AI 예측 관련 면책 등 필요한 사항을 규정합니다.
+      </div>
+    </header>
 
-<p>시험일자: 2025년 3월 26일</p>
+    <main>
+      <section id="def">
+        <h2>제1조 (정의)</h2>
+        <ul>
+          <li><strong>회원:</strong> 본 약관에 동의하고 회사의 서비스를 이용하는 자</li>
+          <li><strong>비회원:</strong> 회원 가입 없이 제한된 범위에서 서비스를 이용하는 자</li>
+          <li><strong>중개사 회원:</strong> 공인중개사 자격을 갖추고 매물 등록 등 중개 관련 기능을 사용하는 회원</li>
+          <li><strong>콘텐츠:</strong> 서비스 내 제공되는 정보, 이미지, 분석 자료, AI 예측 결과 등 일체</li>
+          <li><strong>AI 예측 정보:</strong> 회사의 인공지능 알고리즘이 생성한 부동산 시세 또는 가격 전망 데이터</li>
+        </ul>
+      </section>
 
-<p>약관은 부동산GPT(이해 "회사")가 제공하는 웹사이트 및 모바일 앱 기반 서비스(이해 "서비스") 이용과 관련해 회사와 이용자, 공인중계사 회원 간의 권단, 의무 및 책임사항, 개인정보 처리, 광고성 정보, AI 명책 등 기타 필요한 사항을 규정합니다.</p>
+      <section id="svc">
+        <h2>제2조 (서비스 제공 내용)</h2>
+        <p>회사는 다음의 서비스를 제공합니다.</p>
+        <ol>
+          <li>AI 기반 부동산 가격 예측 및 통계 정보</li>
+          <li>공인중개사 및 일반 회원의 매물 등록, 검색 기능</li>
+          <li>위치 기반 정보 및 실거래가 열람 서비스</li>
+          <li>부동산 뉴스, 정책 요약 정보 제공</li>
+          <li>기타 회사가 정하는 유·무료 부동산 관련 서비스</li>
+        </ol>
+      </section>
 
-<hr>
+      <section id="join">
+        <h2>제3조 (회원가입 및 관리)</h2>
+        <ol>
+          <li>회원은 실명으로 가입하여야 하며, 타인의 정보를 도용한 경우 즉시 탈퇴될 수 있습니다.</li>
+          <li>중개사 회원은 유효한 중개사무소 개설등록증을 보유해야 합니다.</li>
+          <li>다음에 해당하는 경우, 회사는 가입을 제한하거나 이용계약을 해지할 수 있습니다.
+            <ul>
+              <li>허위 정보 기재</li>
+              <li>불법 목적의 이용</li>
+              <li>크롤링, 해킹, 리버스 엔지니어링 시도</li>
+              <li>반복 민원 또는 약관 위반 행위</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
 
-<h2>제1조 (정의)</h2>
-<ul>
-  <li>회원: 본 약관에 동의하고 회사가 제공하는 서비스를 이용하는 자</li>
-  <li>비회원: 회원가입 없이 제한된 서비스를 이용하는 자</li>
-  <li>중계사 회원: 공인중계사 자격을 가지고 중계 매무를 등록하는 회원</li>
-  <li>컨테츠: 서비스 내에서 제공되는 모든 정보, 이미지, AI 배고 결과 등</li>
-  <li>AI 예측 정보: 인공지능 알고리즘이 생성한 부동산 시세·가격 전망 정보</li>
-</ul>
+      <section id="agent">
+        <h2>제4조 (중개사 회원 이용 조건)</h2>
+        <ol>
+          <li>등록 매물은 사실에 기반해야 하며, 허위 또는 과장된 정보 등록은 금지됩니다.</li>
+          <li>반복적인 허위 매물 또는 신고 발생 시, 계정이 제한될 수 있습니다.</li>
+          <li>등록된 매물 정보는 AI 학습 또는 통계 분석 목적으로 활용될 수 있습니다. (단, 개인정보 제외)</li>
+        </ol>
+      </section>
 
-<hr>
+      <section id="duty">
+        <h2>제5조 (이용자의 의무)</h2>
+        <ul>
+          <li>AI 예측 정보의 무단 복제 및 외부 배포 금지</li>
+          <li>타인의 명의 또는 계정 도용 금지</li>
+          <li>시스템의 비정상적 이용 금지</li>
+          <li>음란물·비방·허위 사실의 게시 금지</li>
+          <li>서비스 내 무단 상업적 홍보 및 링크 유도 행위 금지</li>
+        </ul>
+      </section>
 
-<h2>제2조 (서비스 제공 내용)</h2>
-<p>회사는 다음과 같은 서비스를 제공합니다:</p>
-<ul>
-  <li>AI 기반 부동산 가격 예측 및 통계 정보</li>
-  <li>공인중계사 및 개인 회원의 매무 등록·검색</li>
-  <li>위치 기반 정보 제공 및 지역별 실거래가 안내</li>
-  <li>부동산 뉴스, 정책 변화 요약 정보</li>
-  <li>기타 회사가 정하는 유·무료 서비스</li>
-</ul>
+      <section id="ip">
+        <h2>제6조 (지적재산권)</h2>
+        <ul>
+          <li>서비스 내 UI, 콘텐츠, AI 알고리즘 등은 회사에 귀속되며, 무단 복제 또는 배포는 금지됩니다.</li>
+          <li>회원이 업로드한 게시물의 저작권은 회원 본인에게 있으나, 회사는 이를 서비스 운영·홍보 목적 등으로 비영리 활용할 수 있습니다.</li>
+        </ul>
+      </section>
 
-<hr>
+      <section id="ai-disclaimer">
+        <h2>제7조 (AI 예측 서비스 면책 고지)</h2>
+        <div class="blockquote">
+          회사가 제공하는 AI 기반 부동산 예측 정보는 참고용이며, 실제 투자, 계약, 의사결정 등은 이용자의 판단과 책임에 따릅니다. 회사는 해당 정보 이용으로 발생한 손해에 대하여 책임을 지지 않습니다.
+        </div>
+      </section>
 
-<h2>제3조 (회원가입 및 관리)</h2>
-<ul>
-  <li>회원은 본인의 실명으로 가입해야 하며, 타인 정보도움 시 즉시 탈퇴 처리되어야 합니다.</li>
-  <li>공인중계사 회원은 유효한 중계사무소 개설등록증을 보유해야 합니다.</li>
-  <li>회사는 다음의 사용으로 회원가입을 제한하거나 해지할 수 있습니다:
-    <ul>
-      <li>허위 정보 기제 또는 반복된 문의</li>
-      <li>크롤링, 리버스 엔지니어링 등 비정상적 이용</li>
-      <li>관련 법령 위반 또는 회사 정책 위반</li>
-    </ul>
-  </li>
-</ul>
+      <section id="privacy">
+        <h2>제8조 (개인정보 수집 및 처리방침 요약)</h2>
+        <ol>
+          <li><strong>수집 항목</strong>
+            <ul>
+              <li>필수: 이름, 휴대폰 번호, 이메일, 위치정보</li>
+              <li>선택: 관심 지역, 푸시 수신 설정 등</li>
+            </ul>
+          </li>
+          <li><strong>이용 목적</strong>: 회원 관리, 서비스 제공, AI 분석, 고객 응대, 마케팅 활용(동의 시)</li>
+          <li><strong>보유 기간</strong>: 원칙적으로 탈퇴 시 즉시 삭제. 단, 법령상 필요 시 계약·결제 5년, 위치정보 6개월 보관</li>
+          <li><strong>제3자 제공/위탁</strong>: 원칙적 미제공. 단, 일부 위탁 가능(예: 고객지원)</li>
+          <li><strong>이용자의 권리</strong>: 개인정보 열람, 수정, 삭제, 광고성 정보 수신거부 가능</li>
+        </ol>
+        <p class="fine">자세한 내용은 <a href="privacy.html">개인정보처리방침</a>을 참조하십시오.</p>
+      </section>
 
-<hr>
+      <section id="ads">
+        <h2>제9조 (광고성 정보 수신 동의)</h2>
+        <p>회사는 신규 서비스, 혜택, 이벤트 등의 정보를 이메일, 문자, 앱 푸시 등으로 전송할 수 있으며, 이용자는 언제든 수신 거부할 수 있습니다.</p>
+        <ul>
+          <li>앱 푸시: 동의 / 비동의</li>
+          <li>이메일: 동의 / 비동의</li>
+          <li>문자: 동의 / 비동의</li>
+        </ul>
+      </section>
 
-<h2>제4조 (중계사 회원 이용 조건)</h2>
-<ul>
-  <li>매무 등록은 사실 기반이어야 하며, 허위·가장된 정보는 금지됩니다.</li>
-  <li>반복적으로 허위 매무를 등록하거나 문의가 발생할 경우, 사전 통보 없이 계정이 제한될 수 있습니다.</li>
-  <li>등록된 매무 정보는 회사의 AI 학습 및 통계 목적에 활용되어지며 (개인정보 제외) 합니다.</li>
-</ul>
+      <section id="downtime">
+        <h2>제10조 (서비스 중단 및 면책)</h2>
+        <ol>
+          <li>시스템 점검, 장애, 천재지변 등으로 인해 서비스가 일시 중단될 수 있습니다.</li>
+          <li>다음의 사유로 인한 손해에 대하여 회사는 책임지지 않습니다.
+            <ul>
+              <li>AI 정보의 활용 결과</li>
+              <li>회원 간 분쟁, 사기, 피해 등</li>
+              <li>통신망 또는 외부 인프라 장애</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
 
-<hr>
+      <section id="termination">
+        <h2>제11조 (계약 해지 및 서비스 탈퇴)</h2>
+        <ol>
+          <li>회원은 언제든지 탈퇴를 요청할 수 있으며, 회사는 즉시 조치합니다.</li>
+          <li>약관 위반, 허위 매물 등록 등으로 반복적 문제가 발생하는 경우, 회사는 이용계약을 해지할 수 있습니다.</li>
+        </ol>
+      </section>
 
-<h2>제5조 (이용자의 의미)</h2>
-<ul>
-  <li>AI 예측 결과 무단 복제·재배포 금지</li>
-  <li>타인의 정보 도움 및 명의 도움 금지</li>
-  <li>회사 시스템을 비정상적으로 이용하는 행위 금지</li>
-  <li>음란물, 비법, 허위사실 등 게시 금지</li>
-  <li>서비스 내 광고, 호비, 외부 유도 행위 금지</li>
-</ul>
+      <section id="law">
+        <h2>제12조 (분쟁 해결 및 관할)</h2>
+        <p>본 약관에 관한 분쟁은 대한민국 법령을 따르며, 서울중앙지방법원을 제1심 관할 법원으로 합니다.</p>
+      </section>
 
-<hr>
+      <section id="annex">
+        <h2>부칙</h2>
+        <ul>
+          <li>본 약관은 2025년 3월 26일부터 시행됩니다.</li>
+          <li>약관 개정 시 최소 7일 전에 공지사항 또는 앱 알림을 통해 사전 고지합니다.</li>
+        </ul>
+      </section>
+    </main>
 
-<h2>제6조 (지적재산권)</h2>
-<ul>
-  <li>서비스 내 컨테츠, UI, 알고리즘 등은 회사의 자산이며, 무단 복제·배포를 금지합니다.</li>
-  <li>회원이 업로드한 게시물은 본인의 저작권을 가진며, 회사는 비영리 목적으로(서비스 운영, 호비 등) 해당 게시물을 활용할 수 있습니다.</li>
-</ul>
-
-<hr>
-
-<h2>제7조 (AI 예측 서비스 명책 고지)</h2>
-<p>회사가 제공하는 AI 기반 예측 정보는 참고용입니다. 실거래, 계약, 투자 결정 등에는 답변하지 않고, 개인의 판단이 필요하며, 해당 정보로 인해 발생한 손해에 대해 회사는 책임을 지지 않습니다.</p>
-
-<hr>
-
-<h2>제8조 (개인정보 수집 및 처리방침 요약)</h2>
-<ul>
-  <li>수집 항목: 필수(이름, 이메일, 휴대폰 번호, 위치정보 등), 선택(관심 지역, 푸시 수신 여부 등)</li>
-  <li>이용 목적: 회원관리, 서비스 제공, AI 배고, 문의 처리, 마커팅(동의 시)</li>
-</ul>
-
+    <footer class="fine">
+      © 양봉주식회사. All rights reserved.
+    </footer>
+  </div>
 </body>
 </html>
