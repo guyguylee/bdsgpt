@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Search Console / domain verification -->
   <meta name="google-site-verification" content="30lAYGldkbx-smGPuE3qsjBcf9kz9frNMuL3KT6TxnM" />
   <title>부동산GPT</title>
   <style>
@@ -11,10 +12,10 @@
       padding: 0;
       height: 100%;
       scroll-behavior: smooth;
-      font-family: 'Pretendard', sans-serif;
-      color: white;
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', Segoe UI, Roboto, 'Noto Sans KR', Arial, sans-serif;
+      color: #fff;
       overflow: hidden;
-      background-color: #3f88f4;
+      background-color: #3f88f4; /* 기존 컬러 유지 */
     }
 
     .wrapper {
@@ -37,6 +38,7 @@
       opacity: 0;
       transform: translateY(40px);
       transition: all 1s ease-out;
+      text-align: center;
     }
 
     .section.visible {
@@ -46,122 +48,124 @@
 
     .logo {
       font-size: 48px;
-      font-family: 'Sans-serif';
       font-weight: 700;
       margin-bottom: 20px;
+      letter-spacing: -0.5px;
       text-align: center;
     }
 
-    .logo span.white { color: white; }
-    .gpt span.g { color: #EA4335; }
-    .gpt span.p { color: #34A853; }
-    .gpt span.t { color: #FBBC05; }
-
-    .gpt {
-      display: inline-block;
-      letter-spacing: -5px;
-      font-size: 115%;
-    }
+    .logo .white { color: #fff; }
+    .gpt { display: inline-block; letter-spacing: -5px; font-size: 115%; }
+    .gpt .g { color: #EA4335; }
+    .gpt .p { color: #34A853; }
+    .gpt .t { color: #FBBC05; }
 
     .title {
       font-size: 32px;
-      font-weight: bold;
-      margin-bottom: 20px;
-      text-align: center;
+      font-weight: 800;
+      margin-bottom: 16px;
     }
 
     .description {
       font-size: 16px;
-      font-weight: normal;
-      line-height: 1.6;
-      text-align: center;
-      max-width: 600px;
+      line-height: 1.7;
+      max-width: 720px;
+      opacity: .95;
     }
 
-    .footer {
+    .list {
       font-size: 16px;
-      line-height: 1.6;
-      text-align: center;
+      line-height: 1.8;
+      max-width: 720px;
+      text-align: left;
     }
 
-    .footer p {
-      margin: 8px 0;
+    .links a {
+      display: inline-block;
+      margin: 6px 10px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: rgba(255,255,255,.14);
+      color: #fff;
+      text-decoration: none;
+      backdrop-filter: blur(2px);
     }
+    .links a:hover { background: rgba(255,255,255,.22); }
 
-    .email {
-      font-weight: bold;
-      margin-top: 24px;
-    }
+    .footer p { margin: 6px 0; }
 
     @media (max-width: 480px) {
-      .logo {
-        font-size: 36px;
-      }
-
-      .title {
-        font-size: 26px;
-      }
-
-      .description, .footer {
-        font-size: 14px;
-      }
-
-      .gpt {
-        font-size: 105%;
-      }
+      .logo { font-size: 36px; }
+      .title { font-size: 24px; }
+      .description, .list { font-size: 14px; }
+      .gpt { font-size: 105%; letter-spacing: -4px; }
     }
   </style>
 </head>
 <body>
   <div class="wrapper">
-    <div class="section">
-      <div class="logo">
+    <!-- 로고 -->
+    <section class="section">
+      <div class="logo" aria-label="부동산GPT 로고">
         <span class="white">부동산</span>
         <span class="gpt">
-          <span class="g">G</span>
-          <span class="p">P</span>
-          <span class="t">T</span>
+          <span class="g">G</span><span class="p">P</span><span class="t">T</span>
         </span>
       </div>
-    </div>
-
-    <div class="section">
-      <div class="title">프로젝트 개요</div>
-      <div class="description">AI가 분석하고, GPT가 설명하는 부동산 플랫폼</div>
-    </div>
-
-    <div class="section">
-      <div class="title">프로젝트 목표</div>
-      <div class="description">Big Data AI 기반 설명형 부동산 모바일앱</div>
-    </div>
-
-    <div class="section">
-      <div class="title">질문이 있으신가요?</div>
-      <div class="description">프로젝트에 관한 자세한 내용이 궁금하시다면 이메일로 문의해 주세요.</div>
-    </div>
-
-    <div class="section">
-      <div class="footer">
-        <p class="email">[이메일] ceo@nzip.ai</p>
-        <p>[회사명] 양봉 주식회사</p>
-        <p>[주소] 서울특별시 금천구 가산디지털1로 120, 819호</p>
-        <p>[사업자등록번호] 857-86-03315</p>
+      <div class="description">
+        <strong>부동산GPT</strong>는 AI가 분석하고 GPT가 설명하는 부동산 정보·상담 플랫폼입니다.
       </div>
-    </div>
+    </section>
+
+    <!-- 서비스 개요 -->
+    <section class="section">
+      <div class="title">서비스 개요</div>
+      <div class="description">
+        국내 공개 실거래·전월세 데이터를 바탕으로 지역 시세를 요약하고,
+        사용자의 질문에 대해 GPT가 이해하기 쉬운 설명과 인사이트를 제공합니다.
+      </div>
+    </section>
+
+    <!-- 주요 기능 -->
+    <section class="section">
+      <div class="title">주요 기능</div>
+      <div class="list">
+        • 실거래·전월세 데이터 기반 시세 요약<br/>
+        • 아파트/상가 매물 탐색 및 조건 필터링<br/>
+        • GPT 기반 실시간 질의응답(무료/유료 플랜)
+      </div>
+    </section>
+
+    <!-- 정책/링크 -->
+    <section class="section">
+      <div class="title">정책 및 안내</div>
+      <div class="description">서비스 이용 및 데이터 처리에 관한 상세한 정책은 아래 문서를 참고하세요.</div>
+      <div class="links" aria-label="정책 링크">
+        <a href="https://guyguylee.github.io/bdsgpt/privacy_consent.html">개인정보 처리방침</a>
+        <a href="https://guyguylee.github.io/bdsgpt/privacy_policy.html">서비스 약관 및 정책</a>
+      </div>
+    </section>
+
+    <!-- 문의/사업자 -->
+    <section class="section">
+      <div class="title">문의 및 사업자 정보</div>
+      <div class="footer">
+        <p><strong>이메일</strong> : <a href="mailto:ceo@nzip.ai" style="color:#fff; text-decoration:underline;">ceo@nzip.ai</a></p>
+        <p><strong>회사명</strong> : 양봉 주식회사</p>
+        <p><strong>주소</strong> : 서울특별시 금천구 가산디지털1로 120, 819호</p>
+        <p><strong>사업자등록번호</strong> : 857-86-03315</p>
+      </div>
+    </section>
   </div>
 
   <script>
+    // 기존 인터섹션 애니메이션 유지
     const sections = document.querySelectorAll('.section');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
+        if (entry.isIntersecting) entry.target.classList.add('visible');
       });
-    }, {
-      threshold: 0.5
-    });
-
+    }, { threshold: 0.5 });
     sections.forEach(section => observer.observe(section));
   </script>
 </body>
