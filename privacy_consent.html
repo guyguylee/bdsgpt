@@ -12,28 +12,25 @@
     html,body{background:var(--bg); color:var(--fg);}
     body{
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Apple SD Gothic Neo,Noto Sans KR,"Malgun Gothic",sans-serif;
-      line-height:1.6; margin:0;
+      line-height:1.7; margin:0;
     }
     .wrap{max-width:880px; margin:0 auto; padding:28px 20px 80px;}
     header h1{margin:0 0 8px; font-size:28px; line-height:1.25;}
     .desc{color:var(--muted); margin-bottom:18px;}
     h2{margin-top:28px; padding-top:8px; border-top:1px solid var(--border);}
     h3{margin-top:16px;}
-    a{color:var(--link); text-decoration:none;} a:hover{text-decoration:underline;}
+    a{color:var(--link); text-decoration:none;}
+    a:hover{text-decoration:underline;}
     ul,ol{padding-left:22px;}
     .box{border:1px solid var(--border); background:var(--soft); border-radius:10px; padding:14px 16px; margin:14px 0;}
     .note{color:var(--muted); font-size:13px;}
-    .consent{
-      display:flex; gap:12px; align-items:center; padding:16px; border:1px solid var(--border);
-      border-radius:12px; margin-top:24px; background:#fbfbfb;
+    .table-wrap{overflow-x:auto; margin:12px 0;}
+    table{width:100%; border-collapse:collapse; font-size:15px;}
+    th,td{border:1px solid var(--border); padding:12px 10px; text-align:left; vertical-align:top;}
+    th{background:var(--soft); width:24%;}
+    @media print{
+      a{color:inherit; text-decoration:none;}
     }
-    .consent label{cursor:pointer; user-select:none;}
-    .btns{margin-top:14px; display:flex; gap:10px;}
-    .btn{
-      appearance:none; border:1px solid var(--border); background:#fff; padding:10px 14px; border-radius:10px; cursor:pointer;
-    }
-    .btn.primary{background:#0b57d0; color:#fff; border-color:#0b57d0;}
-    @media print{ .consent,.btns{display:none;} a{color:inherit; text-decoration:none;} }
   </style>
 </head>
 <body>
@@ -41,83 +38,183 @@
     <header>
       <h1>부동산GPT 개인정보처리방침</h1>
       <p class="desc">
-        양봉주식회사는 부동산GPT 서비스 제공을 위하여 아래와 같이 개인정보를 수집 및 이용합니다.
-        고객은 개인정보 수집 및 이용에 동의하지 않으실 권리가 있으나, 서비스 제공에 필요한 최소한의 정보에 대한 동의를 거부할 경우 서비스 이용에 제한이 있을 수 있습니다.
+        양봉주식회사(이하 “회사”)는 부동산GPT 서비스 제공과 관련하여 「개인정보 보호법」 등 관계 법령을 준수하며,
+        이용자의 개인정보를 적법하고 안전하게 처리하고 있습니다.
+      </p>
+      <p class="note">
+        시행일자: 2026-03-25
       </p>
     </header>
 
     <main>
-      <section id="items">
-        <h2>1. 수집 항목</h2>
-        <div class="box">
-          <ul>
-            <li>성명, 이메일주소, 비밀번호, 기기정보(OS 정보)</li>
-            <li>광고식별자</li>
-            <li>SNS(카카오, Apple, Facebook, Google 등) 로그인 정보 및 로그인 이력</li>
-            <li>최근 접속 정보</li>
-            <li>식별 값, SNS 프로필 사진</li>
-            <li>휴대폰 번호</li>
-            <li>CI(연계정보)</li>
-            <li>통신사</li>
-            <li>주소, 사업자 정보(이메일주소, 연락처)</li>
-          </ul>
-        </div>
-
-        <h3>[일반 서비스 이용 시]</h3>
+      <section id="purpose">
+        <h2>1. 개인정보의 처리 목적</h2>
         <ul>
-          <li>성명, 이메일주소, 연락처(휴대폰 번호 또는 전화번호), 주소</li>
-          <li>기기정보(OS 정보), CI(연계정보), 통신사</li>
-          <li>서비스 제공 목적을 위해 회사에 제공한 정보들
-            <span class="note">(예: 사업자 방문일시, 서비스 받고자 하는 부동산 주소, 임대인 연락처 등)</span>
-          </li>
-        </ul>
-
-        <h3>[통화 연결 서비스 이용 시]</h3>
-        <ul>
-          <li>연락처 정보(발신 전화번호)</li>
-          <li>서비스 이용 시간 및 이용 기록(통화 시작/종료 시간), 상담내용</li>
+          <li>회원가입 및 이용자 식별, 로그인 지원</li>
+          <li>부동산GPT 서비스 제공, 상담 및 고객 문의 대응</li>
+          <li>본인확인, 중복가입 확인, 부정이용 방지</li>
+          <li>서비스 품질 개선, 오류 분석, 이용 통계 분석</li>
+          <li>공지사항 전달, 분쟁 대응, 민원 처리</li>
+          <li>법령상 의무 이행</li>
         </ul>
       </section>
 
-      <section id="purposes">
-        <h2>2. 수집 목적</h2>
-        <ul>
-          <li>회원가입, 중복확인, 서비스 제공 및 상담</li>
-          <li>본인확인, 만14세 이상 확인</li>
-          <li>만족도 및 설문 조사, 서비스 품질 향상 및 개선</li>
-          <li>신규서비스 개발, 마케팅 및 타겟팅 광고</li>
-          <li>문의사항 또는 분쟁 처리, 제증명 및 부정이용 방지, 사고조사, 보안정책 수립</li>
-          <li>맞춤형 서비스 제공</li>
-        </ul>
+      <section id="items">
+        <h2>2. 처리하는 개인정보 항목</h2>
 
-        <h3>[통화 연결 서비스 이용 시]</h3>
-        <ul>
-          <li>중복확인, 서비스 제공 및 상담</li>
-          <li>본인확인, 만족도 및 설문조사</li>
-          <li>부정이용 방지, 사고조사, 보안정책 수립</li>
-          <li>신규 서비스 이슈 또는 본인 인증 시 본인정보를 이용한 확인 절차</li>
-          <li>각종 고지 및 통지, 문의사항 또는 분쟁 처리</li>
-        </ul>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>구분</th>
+                <th>수집 항목</th>
+                <th>수집 목적</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>회원가입 및 계정 관리</td>
+                <td>성명, 이메일주소, 비밀번호, 휴대폰 번호, SNS 로그인 정보, 식별값, SNS 프로필 사진</td>
+                <td>회원가입, 로그인, 이용자 식별, 계정 관리</td>
+              </tr>
+              <tr>
+                <td>본인확인 서비스 이용 시</td>
+                <td><strong>성명, 휴대폰 번호, 생년월일, 성별, 통신사, CI(연계정보)</strong></td>
+                <td>본인확인, 이용자 식별, 중복가입 확인, 부정이용 방지</td>
+              </tr>
+              <tr>
+                <td>서비스 이용 과정에서 자동 생성</td>
+                <td>기기정보(OS 정보), 접속기록, 최근 접속 정보, 서비스 이용기록, IP주소</td>
+                <td>서비스 제공, 보안, 오류 분석, 통계 분석</td>
+              </tr>
+              <tr>
+                <td>상담 및 문의</td>
+                <td>성명, 연락처, 이메일주소, 문의 내용</td>
+                <td>고객 상담, 문의 처리, 분쟁 대응</td>
+              </tr>
+              <tr>
+                <td>부동산 관련 서비스 이용 시</td>
+                <td>주소, 부동산 정보, 사업자 정보(이메일주소, 연락처) 등 이용자가 직접 입력한 정보</td>
+                <td>서비스 제공, 상담, 요청사항 처리</td>
+              </tr>
+              <tr>
+                <td>광고/마케팅 서비스 이용 시</td>
+                <td>광고식별자</td>
+                <td>광고 성과 측정, 맞춤형 서비스 및 마케팅 활용</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="box">
+          <strong>안내</strong><br />
+          회사는 통합인증서비스 등 본인확인 절차가 필요한 경우, <strong>CI(연계정보)</strong>를 수집·이용할 수 있습니다.
+        </div>
       </section>
 
       <section id="retention">
-        <h2>3. 보유 및 이용 기간</h2>
+        <h2>3. 개인정보의 보유 및 이용기간</h2>
         <ul>
-          <li>회원 탈퇴 시 즉시 삭제</li>
-          <li>광고식별자 정보는 마지막 접속 후 400일 혹은 회원 탈퇴 후 400일 동안 보관</li>
-          <li>관계 법령에 따라 보관 의무가 있을 경우 해당 법령이 요구하는 기간 동안 보관</li>
-          <li>IP정보는 통신비밀보호법에 따라 1년간 보관</li>
-          <li>부정이용 방지 및 서비스 이용 기록 통계용으로 회사 내부 방침에 따라
-            개인을 식별할 수 없는 데이터는 최대 10년간 보관
-          </li>
+          <li>회원 개인정보는 원칙적으로 회원 탈퇴 시 지체 없이 파기합니다.</li>
+          <li>다만, 관계 법령에 따라 보관이 필요한 경우 해당 법령에서 정한 기간 동안 보관합니다.</li>
+          <li>광고식별자 정보는 마지막 접속일 또는 회원 탈퇴일로부터 최대 400일간 보관할 수 있습니다.</li>
+          <li>접속기록(IP 등)은 관련 법령에 따라 일정 기간 보관할 수 있습니다.</li>
+          <li>부정이용 방지 및 분쟁 대응을 위해 필요한 경우 최소한의 정보는 내부 기준에 따라 일정 기간 보관할 수 있습니다.</li>
         </ul>
+      </section>
+
+      <section id="thirdparty">
+        <h2>4. 개인정보의 제3자 제공</h2>
+        <p>
+          회사는 이용자의 개인정보를 원칙적으로 외부에 제공하지 않습니다.
+          다만, 이용자가 별도로 동의한 경우 또는 법령에 특별한 규정이 있는 경우에는 예외로 합니다.
+        </p>
+      </section>
+
+      <section id="outsourcing">
+        <h2>5. 개인정보 처리의 위탁</h2>
+        <p>
+          회사는 원활한 서비스 제공을 위해 필요한 경우 일부 업무를 외부 전문업체에 위탁할 수 있으며,
+          위탁계약 체결 시 관계 법령에 따라 개인정보가 안전하게 처리되도록 관리·감독합니다.
+        </p>
+        <ul>
+          <li>클라우드/데이터 보관 및 시스템 운영</li>
+          <li>본인확인 및 인증 서비스 제공</li>
+          <li>고객 문의 응대 및 알림 발송</li>
+          <li>결제 및 관련 서비스 제공</li>
+        </ul>
+      </section>
+
+      <section id="destruction">
+        <h2>6. 개인정보의 파기 절차 및 방법</h2>
+        <ul>
+          <li>회사는 개인정보 보유기간 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때 지체 없이 파기합니다.</li>
+          <li>전자적 파일 형태의 개인정보는 복구 또는 재생되지 않도록 안전한 기술적 방법으로 삭제합니다.</li>
+          <li>종이 문서에 기록된 개인정보는 분쇄하거나 소각하는 방식으로 파기합니다.</li>
+        </ul>
+      </section>
+
+      <section id="rights">
+        <h2>7. 이용자의 권리와 행사 방법</h2>
+        <ul>
+          <li>이용자는 언제든지 자신의 개인정보 열람, 정정, 삭제, 처리정지를 요청할 수 있습니다.</li>
+          <li>회원 탈퇴를 통해 개인정보 처리 동의를 철회할 수 있습니다.</li>
+          <li>법령에서 보관을 요구하는 정보는 삭제 요청이 있더라도 즉시 삭제되지 않을 수 있습니다.</li>
+          <li>권리 행사는 고객센터 또는 개인정보 보호책임자 연락처를 통해 요청할 수 있습니다.</li>
+        </ul>
+      </section>
+
+      <section id="safety">
+        <h2>8. 개인정보의 안전성 확보조치</h2>
+        <ul>
+          <li>개인정보 접근 권한의 최소화</li>
+          <li>접근통제 및 인증 절차 운영</li>
+          <li>개인정보의 암호화 및 보안 관리</li>
+          <li>접속기록 보관 및 보안 점검</li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h2>9. 개인정보 보호책임자 및 문의처</h2>
+        <div class="box">
+          <p><strong>개인정보 보호책임자</strong></p>
+          <ul>
+            <li>회사명: 양봉주식회사</li>
+            <li>이메일: ceo@nzip.ai</li>
+          </ul>
+          <p class="note">
+            담당자명, 연락처가 확정되면 추가 기재하세요.
+          </p>
+        </div>
+      </section>
+
+      <section id="remedy">
+        <h2>10. 권익침해 구제방법</h2>
+        <p>
+          이용자는 개인정보 침해에 대한 신고나 상담이 필요한 경우 관계 기관에 문의할 수 있습니다.
+        </p>
+        <ul>
+          <li>개인정보침해신고센터</li>
+          <li>개인정보 분쟁조정위원회</li>
+          <li>대검찰청 사이버수사 관련 부서</li>
+          <li>경찰청 사이버범죄 신고 시스템</li>
+        </ul>
+      </section>
+
+      <section id="change">
+        <h2>11. 개인정보처리방침의 변경</h2>
+        <p>
+          본 개인정보처리방침은 법령, 서비스 내용 또는 내부 운영정책 변경에 따라 수정될 수 있으며,
+          내용이 추가·삭제 또는 수정될 경우 서비스 내 공지 또는 홈페이지를 통해 사전에 안내합니다.
+        </p>
       </section>
 
       <section id="links">
         <h2>관련 문서</h2>
         <p class="note">
           자세한 내용은
-          <a href="privacy_policy.html" target="_blank" rel="noopener">부동산GPT 서비스 약관 및 정책</a> 을 참조하시기 바랍니다.
+          <a href="privacy_policy.html" target="_blank" rel="noopener">부동산GPT 서비스 약관 및 정책</a>
+          을 참조하시기 바랍니다.
         </p>
       </section>
     </main>
